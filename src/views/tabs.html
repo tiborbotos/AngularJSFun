@@ -1,6 +1,27 @@
 <app:tabs>
 
-	<app:tab caption="GitHub" selected="true">
+	<app:tab caption="UI Bootstrap" selected="true">
+		<alert type="'success'">It works!</alert>
+
+		<ul>
+			<li class="dropdown">
+				<a class="dropdown-toggle">Click me for a dropdown, yo!</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a>Angular</a>
+					</li>
+					<li>
+						<a>is</a>
+					</li>
+					<li>
+						<a>Fun</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</app:tab>
+
+	<app:tab caption="GitHub">
 		<section ng-controller="gitHubController as controller">
 			<div class="alert alert-info" ng-show="!controller.searchTerm.length">
 				<h4 class="alert-heading">Heads up!</h4>

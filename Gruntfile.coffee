@@ -80,6 +80,11 @@ module.exports = (grunt) ->
 					dest: './.temp/scripts/libs/'
 					expand: true
 				,
+					cwd: './bower_components/angular-bootstrap/'
+					src: 'ui-bootstrap-tpls.min.js'
+					dest: './.temp/scripts/libs/'
+					expand: true
+				,
 					cwd: './bower_components/angular-resource/'
 					src: 'angular-resource.*'
 					dest: './.temp/scripts/libs/'
@@ -201,6 +206,7 @@ module.exports = (grunt) ->
 						'./dist/scripts/libs/angular-animate.js'
 						'./dist/scripts/libs/angular-route.js'
 						'./dist/scripts/libs/angular-resource.js'
+						'./dist/scripts/libs/ui-bootstrap-tpls.min.js'
 						'./bower_components/angular-mocks/angular-mocks.js'
 						'./dist/scripts/**/*.js'
 						'./test/scripts/**/*.{coffee,js}'
@@ -248,6 +254,7 @@ module.exports = (grunt) ->
 					'ngAnimate': 'libs/angular-animate.min.js'
 					'ngResource': 'libs/angular-resource.min.js'
 					'ngRoute': 'libs/angular-route.min.js'
+					'ui.bootstrap': 'libs/ui-bootstrap-tpls.min.js'
 				]
 				src: '**/*.coffee'
 				dest: 'main.coffee'
