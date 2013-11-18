@@ -99,8 +99,8 @@ module.exports = (grunt) ->
 					dest: '.temp/scripts/libs/'
 					expand: true
 				,
-					cwd: 'bower_components/angular-route/'
-					src: 'angular-route.*'
+					cwd: 'bower_components/angular-ui-router/'
+					src: 'release/angular-ui-router.min.*'
 					dest: '.temp/scripts/libs/'
 					expand: true
 				,
@@ -222,7 +222,7 @@ module.exports = (grunt) ->
 					files: [
 						'dist/scripts/libs/angular.js'
 						'dist/scripts/libs/angular-animate.js'
-						'dist/scripts/libs/angular-route.js'
+						'dist/scripts/libs/angular-ui-router.min.js'
 						'bower_components/angular-mocks/angular-mocks.js'
 						'dist/scripts/**/*.js'
 						'test/scripts/**/*.{coffee,js}'
@@ -332,7 +332,6 @@ module.exports = (grunt) ->
 					'**/*.{coffee,js}'
 					'!libs/angular.{coffee,js}'
 					'!libs/angular-animate.{coffee,js}'
-					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
@@ -342,7 +341,7 @@ module.exports = (grunt) ->
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
 						'ngMockE2E': 'libs/angular-mocks.js'
-						'ngRoute': 'libs/angular-route.min.js'
+						'ui.router': 'libs/angular-ui-router.min.js'
 				]
 				require: 'NGBOOTSTRAP'
 			prod:
@@ -352,7 +351,6 @@ module.exports = (grunt) ->
 					'!libs/angular.{coffee,js}'
 					'!libs/angular-animate.{coffee,js}'
 					'!libs/angular-mocks.{coffee,js}'
-					'!libs/angular-route.{coffee,js}'
 					'!libs/html5shiv-printshiv.{coffee,js}'
 					'!libs/json3.min.{coffee,js}'
 					'!libs/require.{coffee,js}'
@@ -362,7 +360,7 @@ module.exports = (grunt) ->
 					'libs/angular.min.js'
 					'NGAPP':
 						'ngAnimate': 'libs/angular-animate.min.js'
-						'ngRoute': 'libs/angular-route.min.js'
+						'ui.router': 'libs/angular-ui-router.min.js'
 				]
 				require: '<%= shimmer.dev.require %>'
 
